@@ -1,6 +1,6 @@
 {
-  "homepage": "https://kakojluzak.github.io/movies/",
-  "name": "my-app",
+  "homepage": "https://kakojluzak.github.io/movies",
+  "name": "movies",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

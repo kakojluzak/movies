@@ -33,7 +33,7 @@ class App extends React.Component<Myprops, MyState> {
       return;
     }
 
-    fetch(`http://www.omdbapi.com/?apikey=${this.API_KEY}&s=${param}`)
+    fetch(`https://www.omdbapi.com/?apikey=${this.API_KEY}&s=${param}`)
       .then(resp => resp)
       .then(resp => resp.json())
       .then(response => {
