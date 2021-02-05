@@ -4,20 +4,21 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 import SearchField from './components/SearchField/SearchField';
 import Gallery from './components/Gallery/Gallery';
 import { useState } from 'react';
+import {notEmpty} from './models/errorModel';
+
 
 function App() {
+  //TO DO REMOVE FROM PAGE SOURCE
   const API_KEY = `ce762116`;
   const [error, setError] = useState({});
   const [movies, setMovies] = useState([]);
   const [isLoaded, setIsLoaded] = useState(true);
-  let notEmpty = { 'Error': '' };
-
-  const fetchForData = (param) => {
+  const errorHandler = notEmpty;
+  const fetchForData = (param) => {debugger
     setIsLoaded(false);
-    if (!param) {
-      notEmpty['Error'] = "Field Cannot be Empty";
+    if (!param) {debugger;
       setMovies([]);
-      setError(notEmpty);
+      setError(errorHandler);
       setIsLoaded(true);
       return;
     }
