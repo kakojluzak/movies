@@ -2,7 +2,7 @@ import Spinner from 'react-bootstrap/Spinner';
 
 import './Gallery.css';
 
-const Gallery = ({ movies, isLoading }) => {
+const Gallery = ({ error, movies, isLoading }) => {
   let shouldShowSpinner = isLoading ? false : true;
 
   let showListOfMovies = (list): JSX.Element[] => {
@@ -13,10 +13,10 @@ const Gallery = ({ movies, isLoading }) => {
       </div>
       );
     });
-    return listMovies
+    return listMovies;
   }
-  
-  let errorHandler = movies && movies['Error'] ? movies['Error'] : [];
+
+  let errorHandler = error['Error'] || movies["Error"] ? error['Error'] || movies['Error'] : [];
 
   return (
     <div className={'spinner'}>
