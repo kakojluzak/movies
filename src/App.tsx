@@ -4,7 +4,7 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 import SearchField from './components/SearchField/SearchField';
 import Gallery from './components/Gallery/Gallery';
 import { useState } from 'react';
-import {notEmpty} from './models/errorModel';
+import { notEmpty } from './models/errorModel';
 
 
 function App() {
@@ -14,9 +14,10 @@ function App() {
   const [movies, setMovies] = useState([]);
   const [isLoaded, setIsLoaded] = useState(true);
   const errorHandler = notEmpty;
+
   const fetchForData = (param) => {
     setIsLoaded(false);
-    if (!param) {debugger;
+    if (!param) {
       setMovies([]);
       setError(errorHandler);
       setIsLoaded(true);
