@@ -1,9 +1,11 @@
+import React, { useRef } from 'react'
+
 import Form from 'react-bootstrap/Form';
 import * as _ from 'underscore';
 import './SearchField.css';
 
 const SearchField = ({ fetchForData }) => {
-  const handleInputThrottled = _.throttle(fetchForData, 1500);
+  const handleInputThrottled = useRef(_.throttle(fetchForData, 500)).current;
 
   return (
     <div className={"searchBar"}>
