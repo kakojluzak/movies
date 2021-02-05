@@ -14,7 +14,7 @@ function App() {
   const [movies, setMovies] = useState([]);
   const [isLoaded, setIsLoaded] = useState(true);
   const errorHandler = notEmpty;
-  const fetchForData = (param) => {debugger
+  const fetchForData = (param) => {
     setIsLoaded(false);
     if (!param) {debugger;
       setMovies([]);
